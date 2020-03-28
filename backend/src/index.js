@@ -10,7 +10,13 @@ app.use(routes)
 
 app.listen(3333);
 
-
+app.get('/number', (request,response)=>{
+    var j = "";
+    for(var i = 0; i<1000; i+=10){
+        j+=" "+i;
+    }
+    return response.send(j);
+})
 
 
 
